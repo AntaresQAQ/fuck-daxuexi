@@ -16,6 +16,7 @@ function start() {
     })
   });
   server.listen(app.config.server.port,app.config.server.host);
+  console.log("服务器开始监听");
 }
 
 module.exports = {

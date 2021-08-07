@@ -12,11 +12,11 @@ function init() {
     process.exit(0);
   }).login(app.config.message.password);
   app.runtimeData.oicqClient = client;
-  global.client = client;
+  console.log("QQ登陆成功");
 }
 
 function bindListener(){
-  client.on("message.group",async (event) => {
+  app.runtimeData.oicqClient.on("message.group",async (event) => {
     if(app.config.message.groupId && event.group_id !== app.config.message.groupId) {
       return;
     }
