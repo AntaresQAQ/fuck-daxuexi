@@ -71,7 +71,7 @@ async function getInfoPage() {
   await browser.close();
   const number = /(\d+)/g.exec(title)[0];
   return [
-    "青年大学习" + title.replace(number, nzhcn.encodeS(parseInt(number))),
+    "“青年大学习”" + title.replace(number, "第" + nzhcn.encodeS(parseInt(number))),
     Buffer.from(image).toString("base64")
   ];
 }
