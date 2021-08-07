@@ -3,6 +3,7 @@ const oicq = require("oicq");
 function init() {
   const client = oicq.createClient(app.config.message.qq, {
     platform: 3,
+    log_level: "off",
   });
   client.on("system.login.device", (event)=> {
     console.log("获取设备锁链接: ");
@@ -16,7 +17,7 @@ function init() {
 
 function bindListener(){
   client.on("message.group",async (event) => {
-    if(event.group_id !== app.config.message.groupId) {
+    if(app.config.message.groupId && event.group_id !== app.config.message.groupId) {
       return;
     }
     if(!RegExp(app.config.message.eventRegex).test(event.raw_message)) {
