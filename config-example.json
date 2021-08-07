@@ -1,0 +1,28 @@
+{
+  "infoPage": {
+    "url": "https://v3.rabbitpre.com/m2/aUe1ZjBxJ9",
+    "name": "",
+    "phone": "",
+    "id": "",
+    "school": "",
+    "college": ""
+  },
+  "sharePage": {
+    "avatar": "https://gravatar.loli.net/avatar/649f1cd6d3db1f339314c2575c9ab163?s=512",
+    "nickname": "Antares",
+    "name": "",
+    "id": "",
+    "class": ""
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 24793
+  },
+  "message": {
+    "qq": 12345678,
+    "password": "",
+    "groupId": 12345678,
+    "eventRegex": "^15[^0-9已完成]+已完成",
+    "sendFormat": "16xxx已完成[img1][img2]"
+  }
+}

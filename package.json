@@ -1,0 +1,19 @@
+{
+  "name": "fuck-daxuexi",
+  "version": "1.0.0",
+  "repository": "git@github.com:AntaresQAQ/fuck-daxuexi.git",
+  "author": "Antares <antares.oier@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "run": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "html-to-image": "^1.7.0",
+    "js-yaml": "^4.1.0",
+    "nzh": "^1.0.5",
+    "oicq": "^1.18.3",
+    "puppeteer": "^10.2.0"
+  }
+}

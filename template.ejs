@@ -1,0 +1,174 @@
+<head>
+    <style>
+        #main {
+            background-color: #fff;
+            display: block;
+            left: 100%;
+            top: 0;
+        }
+
+        .header {
+            width: 100%;
+            height: 132px;
+            font-size: 48px;
+            display: flex;
+            align-items: Center;
+            background-color: #efefef;
+            color: #181818;
+        }
+
+        .footer {
+            width: calc(100% - 64px);
+            height: 132px;
+            position: relative;
+            display: flex;
+            align-items: Center;
+            justify-content: center;
+            padding-left: 32px;
+            padding-right: 32px;
+            border-top: #bfbfbf;
+            background-color: #f7f7f7;
+        }
+
+        .avatarOut {
+            display: inline-block;
+            width: 116px;
+            height: 116px;
+            vertical-align: top;
+            background-color: transparent;
+        }
+
+        .avatarIn {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 116px;
+            height: 116px;
+            background-image: url("<%= app.config.sharePage.avatar %>");
+        }
+
+        .content {
+            position: relative;
+            display: inline-block;
+            width: calc(100% - 143px);
+            left: 22px;
+            vertical-align: top;
+        }
+
+        .article {
+            background-color: #ececec;
+            margin-top: 36px;
+            height: 170px;
+            display: flex;
+            align-items: Center;
+        }
+
+        .articleIcon {
+            position: relative;
+            left: 16px;
+            width: 138px;
+            height: 138px;
+            background-image: url("https://cdn.jsdelivr.net/gh/AntaresQAQ/fuck-daxuexi-cdn@0.1/link.png");
+        }
+
+        .articleTitle {
+            position: relative;
+            left: 32px;
+            width: calc(100% - 170px);
+            font-size: 36px;
+            max-width: 700px;
+            overflow: hidden;
+        }
+
+        .info {
+            display: inline-block;
+            color: #808080;
+            font-size: 32px;
+            width: calc(100% - 65px);
+        }
+
+        .squareImage {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+        .commentInput {
+            border: none;
+            border-bottom: 2px solid #5ec838;
+            font-size: 40px;
+            color: #bbb;
+            width: 760px;
+            height: 88px;
+            padding-left: 24px;
+            padding-right: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .commentSend {
+            border: 2px solid #dcdcdc;
+            border-radius: 7px;
+            font-size: 36px;
+            color: #dcdcdc;
+            width: 122px;
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .commentInput {
+            background-color: #fff;
+            border: none;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+<div id="main" style="display: block; width: 1080px; height: 1920px;">
+    <div class="header" id="header">
+        <div style="width:40px"></div>
+        <img style="width:auto;height:48px"
+             src="https://cdn.jsdelivr.net/gh/AntaresQAQ/fuck-daxuexi-cdn@0.1/back.svg">
+        <div style="width:40px"></div>详情
+    </div>
+    <div style="margin-left: 33px; margin-right: 33px;">
+        <div style="height:30px"></div>
+        <div class="avatarOut">
+            <div class="squareImage avatarIn" id="avatar"></div>
+        </div>
+        <div class="content">
+            <div style="color: #576b95;font-size: 40px;"><%= app.config.sharePage.nickname %></div>
+            <div style="height:11px"></div>
+            <div style="font-size: 36px;line-height: 1.25em;">
+                <%= app.config.sharePage.name %>
+                <br><span style="color:#576b95"><%= app.config.sharePage.id %></span><br>
+                <%= app.config.sharePage.class %>
+            </div>
+            <div class="article" id="article" style="display: flex;">
+                <div class="squareImage articleIcon" id="articleIcon"></div>
+                <div class="articleTitle" id="articleTitle"><%= app.runtimeData.sharePageTitle %></div>
+            </div>
+            <div style="height:20px"></div>
+            <div class="info">
+                <div style="height:20px"></div>
+                <span id="time"><%= app.runtimeData.sharePageTime %> </span>&nbsp;<span style="color:#576b95">删除</span>
+            </div>
+            <img style="position:relative;display:inline-block;width:auto;height:42px;top:9px"
+                 src="https://cdn.jsdelivr.net/gh/AntaresQAQ/fuck-daxuexi-cdn@0.1/comment.svg">
+        </div>
+    </div>
+    <div class="footer" id="footer" style="bottom: -1130px;">
+<!--        1030-->
+        <div class="commentInput">评论</div>
+        <div style="width:22px;display:inline-block"></div>
+        <img style="width:88px!important;height:88px!important"
+             src="https://cdn.jsdelivr.net/gh/AntaresQAQ/fuck-daxuexi-cdn@0.1/emoticon.svg">
+        <div style="width:40px;display:inline-block"></div>
+        <div class="commentSend">发送</div>
+    </div>
+</div>
+</body>
