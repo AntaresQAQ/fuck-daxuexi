@@ -17,6 +17,7 @@ async function getInfoPage() {
       height: 1280,
       isMobile: true,
     },
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
   const page = await browser.newPage();
   await page.goto(config.url);

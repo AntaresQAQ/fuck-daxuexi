@@ -16,6 +16,7 @@ async function getSharePage() {
       height: 1920,
       isMobile: true,
     },
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
   const page = await browser.newPage();
   // noinspection HttpUrlsUsage
