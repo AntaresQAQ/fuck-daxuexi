@@ -22,7 +22,9 @@ async function getSharePage() {
   // noinspection HttpUrlsUsage
   await page.goto(`http://${app.config.server.host}:${app.config.server.port}`);
   await sleep();
-  return Buffer.from(await page.screenshot({ omitBackground:true })).toString("base64");
+  const data = Buffer.from(await page.screenshot({ omitBackground:true })).toString("base64");
+  await browser.close();
+  return data;
 }
 
 module.exports = {
